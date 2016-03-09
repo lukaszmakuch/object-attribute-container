@@ -1,0 +1,28 @@
+{
+    "name": "lukaszmakuch/object-attribute-container",
+    "description": "Allows to attach some attributes to objects",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Łukasz Makuch",
+            "email": "kontakt@lukaszmakuch.pl",
+            "homepage": "http://lukaszmakuch.pl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "lukaszmakuch\\ObjectAttributeContainer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "lukaszmakuch\\ObjectAttributeContainer\\": "test/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "4.7.*",
+        "phpdocumentor/phpdocumentor": "2.*"
+    }
+}
