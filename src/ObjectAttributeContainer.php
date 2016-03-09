@@ -27,8 +27,7 @@ interface ObjectAttributeContainer
      * @param mixed $object used as a key
      * @param array $attributesWithOptionalValues like
      * [
-     *     String "marker_attribute_without_a_value",
-     *     String "attribute_with_value" => mixed "possible value of this attr",
+     *     String "attribute_name" => mixed "attribute_value",
      *     ...
      * ]
      * 
@@ -42,7 +41,7 @@ interface ObjectAttributeContainer
      * @param mixed $object
      * @param String $attributeName
      * 
-     * @return boolean true if there's any (even empty or with null value) 
+     * @return boolean true if there's any (even with null value) 
      * attribute with the given name associated with this object; 
      * If no attribute has been ever associated with this object
      * false is returned
@@ -55,8 +54,7 @@ interface ObjectAttributeContainer
      * @param mixed $object
      * @param String $attributeName
      * 
-     * @return mixed attribute value or null if no attribute value has been 
-     * provided
+     * @return mixed attribute value 
      * @throws AttributeNotFound
      */
     public function getObjAttrVal($object, $attributeName);
