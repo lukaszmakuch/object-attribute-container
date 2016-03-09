@@ -13,6 +13,11 @@ use lukaszmakuch\ObjectAttributeContainer\Exception\AttributeNotFound;
 use lukaszmakuch\ObjectAttributeContainer\ObjectAttributeContainer;
 use SplObjectStorage;
 
+/**
+ * Default implementation of the attribute container.
+ * 
+ * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
+ */
 class ObjectAttributeContainerImpl implements ObjectAttributeContainer
 {
     /**
@@ -72,7 +77,7 @@ class ObjectAttributeContainerImpl implements ObjectAttributeContainer
     
     /**
      * @param mixed $object
-     * @return array like ["attrWithNoValue", "attrWithValue" => mixed, ...]
+     * @return array like ["attrWithValue" => mixed, ...]
      */
     private function getAllAttributesOf($object)
     {
