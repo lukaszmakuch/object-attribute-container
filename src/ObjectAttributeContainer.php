@@ -10,6 +10,7 @@
 namespace lukaszmakuch\ObjectAttributeContainer;
 
 use lukaszmakuch\ObjectAttributeContainer\Exception\AttributeNotFound;
+use lukaszmakuch\ObjectAttributeContainer\Exception\ImpossibleToAddAttributes;
 
 /**
  * Allows to associate some attribute and its optional value with some object.
@@ -31,6 +32,7 @@ interface ObjectAttributeContainer
      *     ...
      * ]
      * 
+     * @throws ImpossibleToAddAttributes
      * @return mixed exactly the same object which was passed as the $object parameter
      */
     public function addObjAttrs($object, array $attributesWithOptionalValues);
