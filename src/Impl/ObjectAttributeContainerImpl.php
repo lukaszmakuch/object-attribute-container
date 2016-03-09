@@ -61,6 +61,7 @@ class ObjectAttributeContainerImpl implements ObjectAttributeContainer
         if (!$this->objHasAttr($object, $attributeName)) {
             throw new AttributeNotFound();
         }
+
         $allAttrs = $this->getAllAttributesOf($object);
         unset($allAttrs[$attributeName]);
         $this->attributesByObjects->offsetSet($object, $allAttrs);
