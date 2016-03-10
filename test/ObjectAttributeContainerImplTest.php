@@ -138,4 +138,13 @@ class ObjectAttributeContainerImplTest extends \PHPUnit_Framework_TestCase
             "nonexistent-attr-key"
         );
     }
+    
+    public function testReturnedValue()
+    {
+        $this->assertTrue(
+            $this->attrContainer->addObjAttrs($this->testObj, ["k" => "v"])
+            ===
+            $this->testObj
+        );
+    }
 }

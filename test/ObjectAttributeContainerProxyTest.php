@@ -98,4 +98,14 @@ class ObjectAttributeContainerProxyTest extends PHPUnit_Framework_TestCase
         $this->assertEquals("val", $this->proxy->getObjAttrVal($this->testObj, "abkey"));
         $this->assertEquals("val", $this->actualContainerB->getObjAttrVal($this->testObj, "key"));
     }
+    
+    public function testReturnedValue()
+    {
+        $this->proxy->registerContainer("a", $this->actualContainerA);
+        $this->assertTrue(
+            $this->proxy->addObjAttrs($this->testObj, ["a" => "v"])
+            ===
+            $this->testObj
+        );
+    }
 }

@@ -75,6 +75,8 @@ class ObjectAttributeContainerProxy implements ObjectAttributeContainer
                 [$this->getPrefixFreeVersionOf($attrName) => $attrVal]
             );
         }
+        
+        return $object;
     }
 
     public function getObjAttrVal($object, $attributeName)

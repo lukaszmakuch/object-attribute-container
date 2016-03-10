@@ -37,6 +37,7 @@ class ObjectAttributeContainerImpl implements ObjectAttributeContainer
             $attributesWithOptionalValues
         );
         $this->attributesByObjects->offsetSet($object, $newAttrs);
+        return $object;
     }
 
     public function getObjAttrVal($object, $attributeName)
